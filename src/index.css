@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*{
+/* Primary */
+--LightCyan: hsl(193, 38%, 86%);
+--NeonGreen: hsl(150, 100%, 66%);
+/* Neutral */
+--GrayishBlue: hsl(217, 19%, 38%);
+--DarkGrayishBlue: hsl(217, 19%, 24%);
+--DarkBlue: hsl(218, 23%, 16%);
+}
+
+
+.App{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: var(--DarkBlue);
+}
+.advice_container {
+  background-color: var(--DarkGrayishBlue);
+  margin: 25vh auto 0 auto;
+  width: 22em;
+  height: 22em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+
+.advice_id{
+  color: var(--NeonGreen);
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-top: 1em;
+}
+.advice_body{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.advice_text{
+  color: var(--LightCyan);
+  font-family: 'Manrope', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  height: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  padding: 0;
+  width: 100px; 
+  height: 100px; 
+}
+
+.container_dice {
+  background: var(--NeonGreen);
+  border-radius: 50%;
+  display: flex;
+  width: 5em;
+  height: 5em;
+  justify-content: center;
+  align-items: center;
+  border-color: var(--DarkBlue);
+  position: absolute;
+  margin-top: 20em;
+}
+.container_dice:hover{
+  box-shadow: 0px 0px 20px var(--NeonGreen);
+}
+.divider{
+  position: absolute;
+  margin-top: 12.5em
+}
+.icon_dice{
+  width: 2em;
+  height: 2em;
+}
+.loading_id{
+  width: 50%;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  animation: loading-id 1s linear infinite alternate;
+}
+
+@keyframes loading-id {
+  0% {
+    background-color: var(--NeonGreen)
+  }
+  50%{
+    background-color: hsl(150, 55%, 42%);
+  }
+  100% {
+    background-color: hsl(150, 55%, 31%);
+  }
+}
+
+@keyframes loading-text {
+  0% {
+    background-color: var(--LightCyan)
+  }
+  50%{
+    background-color: hsl(194, 13%, 66%);
+  }
+  100% {
+    background-color: hsl(194, 7%, 46%);
+  }
+}
+.loading_text {
+  width: 100%;
+  height: 0.7rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  animation: loading-text 1s linear infinite alternate;
+
+}
+
